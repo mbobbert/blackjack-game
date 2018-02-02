@@ -61,19 +61,22 @@ background-color: green;
 }
 
 .score_player {
-    width: 50px;
+    width: 300px;
     height: 50px;
-    font-size: 20px;
+    font-size: 30px;
     background-color: white;
+    border: 3px solid black;
+    text-align: center;
     color: black;
 }
 
 .game_over {
     width: 300px;
-    height: 300px;
-    font-size: 20px;
+    height: 50px;
+    font-size: 30px;
     background-color: white;
     color: red;
+    text-align: center;
 }
 
 #hit_btn {
