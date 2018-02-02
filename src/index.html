@@ -24,10 +24,29 @@
 
 	<script src="/js/jquery-3.3.1.min.js"></script>
 	<script src="/js/index.js"></script>
+
+
 	<script>
 		$(document.body).append(
 			$('<h1>Testing JQuery</h1>')
 		);
+
+	var deck = generateDeck();
+	deck = shuffleDeck(deck);
+	console.log(deck);
+
+	$('#deal_btn').on('click', function() {
+	alert("hello");
+	var card = deck.pop();
+	card.createHTML_card_image();
+
+	console.log(card);
+	});
+
+        
+       
+
+        
 	</script>
 </body>
 </html>
