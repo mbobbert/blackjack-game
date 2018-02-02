@@ -17,17 +17,20 @@
 
 	<div class="dealer_area"></div>
 	<div class="player_area"></div>
+	<div class="score_player"></div>
+	<div class="game_over"></div>
 
 	<button id="deal_btn">DEAL</button>
 	<button id="hit_btn">HIT</button>
 	<button id="stand_btn">STAND</button>
+
 
 	<script src="/js/jquery-3.3.1.min.js"></script>
 	<script src="/js/index.js"></script>
 
 
 	<script>
-
+	var score_player = 0;
 
 	var deck = generateDeck();
 	deck = shuffleDeck(deck);
@@ -37,12 +40,22 @@
 	var card = deck.pop();
 	card.createHTML_card_image();
 
-	console.log(card);
+
 	console.log(card.value);
-	//var score_player = card.value
+
+	score_player = score_player + card.value
+	$('.score_player').html(score_player);
+
+	if (score_player > 21 ) {
+	$('.game_over').html("YOU ARE BUSTED!")
+	}
+	//else if (score_player = 21) {
+		//$('.game_over').html("YOU HAVE WON!")
+	//}
 
 
-	
+
+
 
 	console.log(card.value);
 
