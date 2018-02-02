@@ -27,16 +27,13 @@
 
 
 	<script>
-		$(document.body).append(
-			$('<h1>Testing JQuery</h1>')
-		);
+
 
 	var deck = generateDeck();
 	deck = shuffleDeck(deck);
 	console.log(deck);
 
 	$('#deal_btn').on('click', function() {
-	alert("hello");
 	var card = deck.pop();
 	card.createHTML_card_image();
 
